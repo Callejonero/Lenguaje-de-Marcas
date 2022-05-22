@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 90%;
+  margin:0 auto;
+  background-image: url("../imagenes/malpica2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+/* Header */
+h1,
+h2 { 
+  font-family: Georgia, serif;
+  text-align:center;
+  /*dentro de h1 y h2 todo irá centrado ya que es texto */
+}
+
+h1 {
+  font-size: 3em;
+}
+/* formulario*/
+form {
+  background-color: aqua;
+  opacity: .8;
+}
+
+fieldset {
+  width: 30%;
+  display: inline;
+  opacity: .8;
+}
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#condiciones {
+  width: 80%;
+  display: block;
+  margin:0 auto;
+}
+/* elemento label */
+label {
+  font-weight: bold;
+  display: block;
+}
+
+.enlinea {
+  display: inline;
+}
+.obligatorio::after {
+  content:url(../imagenes/asterisco.png)
+}
+/* inputs */
+input[type="text"]:focus {
+  background-color: yellow;
+  width: 80%;
+  font-weight: bold;
+}
+input[type="password"]:focus {
+  background-color: rgb(221, 0, 255);
+  width: 80%;
+  font-weight: bold;
+}
+input[type="email"]:focus {
+  background-color: rgb(0, 255, 157);
+  width: 80%;
+  font-weight: bold;
+  border-radius:25%;
+}
+/* botones input */
+#botonCrear:hover {
+  background-color: red;
+}
+
+#botonLimpiar:hover {
+  background-color: green;
+}
+
+#botones input {
+  font-size: 2em;
+  padding: 0.5em;
+
+}
+
+#botones {
+  text-align:center;
+}

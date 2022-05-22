@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="formularioViernes20.css">
+    <title>Registro - Ferretería</title>
+</head>
+
+<body>
+    <header>
+        <h1>FERRETERÍA EL TORNILLO FELIZ</h1>
+    </header>
+    <h2>Formulario de registro</h2>
+    <form id="formRegistro" action="comprobacion.html" method="post">
+        <fieldset>
+            <legend>¿Quién eres?</legend>
+            <div>
+                <label class="obligatorio" for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"
+                    title="Máximo 20 caracteres" maxlength="20" required />
+            </div>
+            <div>
+                <label class="obligatorio" for="apellidos">Apellidos</label>
+                <input class="obligatorio" type="text" name="apellidos" id="apellidos" placeholder="Escribe tus apellidos"
+                    title="Máximo 50 caracteres" maxlength="50" required />
+            </div>
+
+            <div>
+                <label class="obligatorio" for="correo">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
+                    placeholder="Por ejemplo, usuario@dominio.es" />
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>¿De dónde eres?</legend>
+            <div>
+                <label for="ciudad">Ciudad</label>
+                <input type="text" name="ciudad" id="ciudad" value="Sevilla"
+                    title="Escribe otra ciudad si no es la que aparece" />
+            </div>
+
+            <div>
+                <label for="cp">Código postal</label>
+                <input type="text" name="cp" id="cp" pattern="[0-9]{5}" maxlength="5" placeholder="Por ejemplo, 41010"
+                    title="Código Postal" />
+            </div>
+
+            <div>
+                <label for="pais">País</label>
+                <select name="pais" id="pais" title="Indica tu procedencia">
+                    <optgroup label="Indica tu procedencia">
+                        <option value="España">España</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Andorra">Andorra</option>
+                    </optgroup>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>¿Cómo quieres iniciar sesión?</legend>
+            <div>
+                <label class="obligatorio" for="nomusu">Nombre de usuario</label>
+                <input type="text" name="nomusu" id="nomusu" title="Nombre entre 5 y 9 caracteres que te identificará"
+                    placeholder="P.e. atorres21" minlength="5" maxlength="7" required />
+            </div>
+
+            <div>
+                <label class="obligatorio" for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Debe contener 8 o más
+caracteres con al menos un número, una mayúscula
+y una letra minúscula" required/>
+            </div>
+
+            <div>
+                <label class="obligatorio" for="repcontraseña">Vuelve a escribir la contraseña</label>
+                <input type="password" name="repcontraseña" id="repcontraseña"
+                    placeholder="Debe coincidir con la anterior" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener 8 o más caracteres con al menos un número, una mayúscula y una letra minúscula" required/>
+            </div>
+        </fieldset>
+        <details>
+            <summary>Info sobre la contraseña</summary>
+            <p>La contraseña debe contener <strong>8 o más caracteres</strong> con <em>al menos un número, una mayúscula y una letra minúscula</em>
+            </p>
+        </details>
+        <fieldset id="condiciones">
+            <legend>Condiciones de registro</legend>
+
+            <strong>Deseo recibir ofertas de FERRETERÍA EL TORNILLO FELIZ</strong>
+            <div>
+                <input type="radio" name="ofertas" id="ofertas1" value="diario" />
+                <label for="ofertas1" class="enlinea" title="Periodicidad diaria">Una vez al día</label>
+                <input type="radio" name="ofertas" id="ofertas2" value="semanal" />
+                <label for="ofertas2" class="enlinea" title="Periodicidad semanal">Una vez a la semana</label>
+                <input type="radio" name="ofertas" id="ofertas3" value="mensual" />
+                <label for="ofertas3" class="enlinea" title="Periodicidad mensual">Una vez al mes</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="acepto" id="acepto" required/>
+                <label for="acepto" class="obligatorio enlinea"  title="Aceptación acuerdo servicio mensajería">Acepto el acuerdo de
+                    servicios, la declaración de privacidad y la declaración de uso de cookies</label>
+            </div>
+        </fieldset>
+
+        <div id="botones">
+            <input type="submit" value="Crear cuenta" id="botonCrear" />
+            <input type="reset" value="Limpiar datos" id="botonLimpiar" />
+        </div>
+
+    </form>
+</body>
+
+</html>
